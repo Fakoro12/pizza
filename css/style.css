@@ -1,0 +1,227 @@
+#video-background {
+    position: relative;
+    width: 100%; /* Ширина div */
+    height: 500px; /* Высота div может быть любой, заданной вами */
+    overflow: hidden;
+}
+
+#video-background video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Растягиваем видео по размерам div */
+    z-index: -1;
+}
+
+#video-background .content {
+    position: relative;
+    z-index: 1; /* Контент над видео */
+    color: white;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.shaky-image {
+    display: block;
+    width: 300px; /* Установите ваш размер */
+    height: auto;
+    animation: shake 0.5s infinite; /* Скорость и бесконечная анимация */
+}
+
+.shaky-image:hover {
+    animation: none; /* Остановка анимации при наведении */
+    transform: scale(1.1); /* Увеличение на 10% при наведении */
+    transition: transform 0.2s ease-in-out; /* Плавный переход */
+}
+
+.shaky-text {
+    display: inline-block;
+    animation: shake 0.5s infinite;
+    transform-origin: left center; /* Чтобы текст увеличивался от левой стороны */
+    text-align: left; /* Выравнивание текста влево */
+}
+
+.shaky-text:hover {
+    animation: none; /* Остановка анимации при наведении */
+    transform: scale(1.1); /* Легкое увеличение */
+    transition: transform 0.2s ease-in-out;
+}
+
+@font-face {
+    font-family: 'MyCustomFont'; /* Название шрифта */
+    src: url('font.ttf') format('truetype'); /* Путь к вашему .ttf файлу */
+    font-weight: normal; /* По желанию: normal, bold, italic */
+    font-style: normal;  /* По желанию: normal, italic */
+}
+
+/* Применение шрифта на сайте */
+.text {
+    font-family: 'MyCustomFont', sans-serif; /* Указываете подключенный шрифт */
+    color: #FFF;
+}
+#video-background2 {
+    position: relative;
+    width: 100%; /* Ширина div */
+    height: 1100px; /* Высота div может быть любой, заданной вами */
+    overflow: hidden;
+}
+
+#video-background2 video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Растягиваем видео по размерам div */
+    z-index: -1;
+}
+.overlay-image {
+    position: absolute;
+    left: 50%; /* Центрирование изображения по горизонтали */
+    top: 100%; /* Смещение изображения вниз по отношению к первому блоку */
+    transform: translate(-50%, -50%); /* Центрирование изображения относительно блока */
+    z-index: 10; /* Изображение находится поверх блоков */
+    width: 100%; /* Задайте нужную ширину изображения */
+    height: auto; /* Поддержание пропорций изображения */
+}
+#copyText {
+    transform: scale(1.1); /* Легкое увеличение */
+    transition: transform 0.2s ease-in-out;
+}
+.scalable-text {
+    font-size: 20px;
+    transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out;
+    display: inline-block;
+    cursor: pointer; /* Указатель мыши при наведении */
+}
+
+.scalable-text:hover {
+    transform: scale(1.2); /* Увеличение текста при наведении */
+    font-size: 18px;
+}
+.overlay-image2 {
+    position: absolute;
+    left: 50%; /* Центрирование изображения по горизонтали */
+    top: 220%; /* Смещение изображения вниз по отношению к первому блоку */
+    transform: translate(-50%, -50%); /* Центрирование изображения относительно блока */
+    z-index: 11; /* Изображение находится поверх блоков */
+    width: 100%; /* Задайте нужную ширину изображения */
+    height: auto; /* Поддержание пропорций изображения */
+}
+
+        .image-container {
+            position: relative;
+            width: 150px; /* Установите ширину по вашему усмотрению */
+            height: 300px; /* Установите высоту по вашему усмотрению */
+            overflow: hidden;
+        }
+
+        /* Изображение */
+        .image-container img {
+            position: absolute;
+            width: 100%;
+            height: auto;
+            animation: moveUpDown 3s ease-in-out infinite;
+        }
+
+        /* Анимация */
+        @keyframes moveUpDown {
+            0% {
+                top: 0;
+            }
+            50% {
+                top: 20px; /* Насколько вниз изображение будет опускаться */
+            }
+            100% {
+                top: 0;
+            }
+        }
+#bottomlink {
+    text-decoration: none;
+}
+       
+        .image-container-social {
+            position: relative;
+            width: 300px; /* Установите ширину по вашему усмотрению */
+            height: 600px; /* Установите высоту по вашему усмотрению */
+            overflow: hidden;
+        }
+
+        /* Изображение */
+        .image-container-social img {
+            position: absolute;
+            width: 140px;
+            height: auto;
+            animation: moveUpDown1 3s ease-in-out infinite;
+        }
+
+        /* Анимация */
+        @keyframes moveUpDown1 {
+            0% {
+                top: 0;
+            }
+            50% {
+                top: 20px; /* Насколько вниз изображение будет опускаться */
+            }
+            100% {
+                top: 0;
+            }
+        }
+
+        .image-container-s-2 img {
+            width: 100px; /* Ширина изображения */
+            height: auto; /* Автоматическая высота */
+            transition: all 0.3s ease; /* Плавный переход */
+        }
+
+        /* При наведении меняем изображение */
+        .image-container-s-2 img:hover {
+            content: url('tg.png');
+        }
+                .image-container-s-3 img {
+            width: 100px; /* Ширина изображения */
+            height: auto; /* Автоматическая высота */
+            transition: all 0.3s ease; /* Плавный переход */
+        }
+
+        /* При наведении меняем изображение */
+        .image-container-s-3 img:hover {
+            content: url('tw.png');
+        }
+         .image-container-s-4 img {
+            width: 100px; /* Ширина изображения */
+            height: auto; /* Автоматическая высота */
+            transition: all 0.3s ease; /* Плавный переход */
+        }
+
+        /* При наведении меняем изображение */
+        .image-container-s-4 img:hover {
+            content: url('dex.png');
+        }
+        #social {
+            background-color: #FCDF20;
+            color: #FD644D;
+        }
+        #link {
+            text-decoration: none;
+            color: #FFF;
+        }
+        #osn {
+            background-color: #FD644D;
+        }
